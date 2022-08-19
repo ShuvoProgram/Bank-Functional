@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="dark:bg-gray-800 dark:text-gray-200">
+  <header class="flex flex-row justify-center">
+    <div class="basis-1/2">
+      <h3 class="my-9 text-center text-4xl font-medium font-mono text-color">
+        Transactions <span class="text-cyan-400">Money!!</span>
+      </h3>
+    </div>
+    <div class="mt-7">
+      <button class=" bg-slate-400 p-2 rounded-lg text-color" id="btn-dark">Light</button>
+    </div>
+  </header>
+  <main>
+    <!-- transaction-display -->
+    <section class="grid grid-cols-3 gap-4 w-2/5 text-xl text-white font-medium mx-auto">
+      <div class="bg-cyan-500 p-6 text-center rounded-xl">
+        <h3>Deposit</h3>
+        <h3>$<span id="deposit-store">00</span></h3>
+      </div>
+      <div class="bg-cyan-500 p-6 text-center rounded-xl">
+        <h3>Withdraw</h3>
+        <h3>$<span id="withdraw-store">00</span></h3>
+      </div>
+      <div class="bg-cyan-500 p-6 text-center rounded-xl">
+        <h3>Balance</h3>
+        <h3>$<span id="balance-store">1240</span></h3>
+      </div>
+    </section>
+    <section class="mt-10">
+      <div class="grid grid-cols-2 gap-4 w-7/12 mx-auto">
+        <div class="bg-cyan-500 p-5 rounded-xl">
+          <h3 class="text-white text-xl">Please Deposit</h3>
+          <input id="deposit-field" type="text" class="block my-3 p-2 w-11/12 text-black"
+            placeholder="$ Amount you want to deposit" />
+          <button class="text-white bg-cyan-700 p-2 rounded-lg" id="btn-deposit">
+            Deposit
+          </button>
+        </div>
+        <div class="bg-cyan-500 p-5 rounded-xl">
+          <h3 class="text-white text-xl">Please Withdraw</h3>
+          <input type="text" class="block my-3 p-2 w-11/12 text-black" placeholder="$ Amount you want to Withdraw"
+            id="withdraw-field" />
+          <button class="text-white bg-cyan-700 p-2 rounded-lg" id="btn-withdraw">
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/utilitize.js"></script>
+  <script src="./js/deposit.js"></script>
+  <script src="./js/withdraw.js"></script>
+</body>
+</html>
